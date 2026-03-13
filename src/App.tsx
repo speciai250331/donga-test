@@ -13,7 +13,10 @@ function App() {
   return (
     <BrowserRouter basename="/ai-test">
       <Routes>
-        {/* Public */}
+        {/* Root → Admin Dashboard */}
+        <Route path="/" element={<Navigate to="/admin" replace />} />
+
+        {/* Public - 진단 페이지 */}
         <Route path="/diagnostic" element={<DiagnosticPage />} />
         <Route path="/diagnostic/imm" element={<ImmDiagnosticPage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -34,7 +37,7 @@ function App() {
           <Route path="settings" element={<SettingsPage />} />
         </Route>
 
-        {/* Default redirect */}
+        {/* Fallback */}
         <Route path="*" element={<Navigate to="/admin" replace />} />
       </Routes>
     </BrowserRouter>
