@@ -47,4 +47,15 @@ export interface LearnerRecord {
   part1: number;
   part2: number;
   date: string;
+  projectId?: string;
+}
+
+export interface Project {
+  id: string;
+  name: string;
+  slug: string;
+  type: 'standard' | 'imm';
+  isActive: boolean;
+  showResult: boolean;
+  createdAt: string;
 }

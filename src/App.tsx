@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { DiagnosticPage } from './pages/DiagnosticPage';
 import { ImmDiagnosticPage } from './pages/ImmDiagnosticPage';
+import { DynamicDiagnosticPage } from './pages/DynamicDiagnosticPage';
 import { LoginPage } from './pages/LoginPage';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import {
@@ -19,6 +20,7 @@ function App() {
         {/* Public - 진단 페이지 */}
         <Route path="/diagnostic" element={<DiagnosticPage />} />
         <Route path="/diagnostic/imm" element={<ImmDiagnosticPage />} />
+        <Route path="/diagnostic/:slug" element={<DynamicDiagnosticPage />} />
         <Route path="/login" element={<LoginPage />} />
 
         {/* Protected Admin */}
