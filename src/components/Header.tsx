@@ -22,12 +22,9 @@ export const Header: React.FC<HeaderProps> = ({ step, progress }) => {
             className="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white text-sm"
             style={{ background: BRAND.primary }}
           >
-            DA
+            AI
           </div>
           <div>
-            <div className="text-xs font-medium tracking-wide" style={{ color: BRAND.gray[400] }}>
-              동아쏘시오홀딩스
-            </div>
             <div className="text-sm font-semibold" style={{ color: BRAND.dark }}>
               AI 역량 사전 진단
             </div>

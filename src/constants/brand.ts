@@ -1,9 +1,9 @@
 export const BRAND = {
-  primary: '#01ABCC',
-  primaryDark: '#0195B3',
-  primaryLight: '#E6F7FA',
-  accent: '#FF6B35',
-  dark: '#1A2B3C',
+  primary: '#4A5568',
+  primaryDark: '#2D3748',
+  primaryLight: '#F7FAFC',
+  accent: '#718096',
+  dark: '#1A202C',
   gray: {
     50: '#F8FAFB',
     100: '#F1F5F7',

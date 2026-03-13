@@ -39,12 +39,12 @@ export const LoginPage = () => {
             width: 48, height: 48, background: BRAND.primary, borderRadius: 12,
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             color: 'white', fontWeight: 700, fontSize: 16, marginBottom: 16,
-          }}>DA</div>
+          }}>AI</div>
           <h1 style={{ fontSize: 20, fontWeight: 700, color: BRAND.dark, marginBottom: 4 }}>
             관리자 로그인
           </h1>
           <p style={{ fontSize: 13, color: BRAND.gray[500] }}>
-            동아쏘시오홀딩스 AI 역량 진단 시스템
+            AI 역량 진단 시스템
           </p>
         </div>
 

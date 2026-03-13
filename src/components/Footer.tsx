@@ -10,14 +10,14 @@ export const Footer: React.FC = () => {
             className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold"
             style={{ background: BRAND.primary }}
           >
-            DA
+            AI
           </div>
           <div className="text-xs" style={{ color: BRAND.gray[400] }}>
-            동아쏘시오홀딩스 AI 역량 진단 시스템
+            AI 역량 진단 시스템
           </div>
         </div>
         <div className="text-xs" style={{ color: BRAND.gray[400] }}>
-          © 2025 DONG-A SOCIO HOLDINGS
+          © 2025 AI Diagnostic System
         </div>
       </div>
     </footer>

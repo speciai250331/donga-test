@@ -269,7 +269,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({ result, answers, isA
             <div className="h-4 rounded-full overflow-hidden" style={{ background: BRAND.gray[100] }}>
               <div
                 className="h-full rounded-full transition-all duration-1000 flex items-center justify-end pr-2"
-                style={{ width: `${Math.max(part2Pct, 8)}%`, background: `linear-gradient(90deg, ${BRAND.primaryDark}, #017A94)` }}
+                style={{ width: `${Math.max(part2Pct, 8)}%`, background: `linear-gradient(90deg, ${BRAND.primaryDark}, #718096)` }}
               >
                 {part2Pct >= 20 && <span className="text-[10px] font-bold text-white">{part2Pct}%</span>}
               </div>
@@ -354,7 +354,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({ result, answers, isA
           })}
 
           {/* PART 2 */}
-          <div className="px-5 py-3" style={{ background: '#EFF8FA' }}>
+          <div className="px-5 py-3" style={{ background: '#F7FAFC' }}>
             <span className="text-xs font-bold" style={{ color: BRAND.primaryDark }}>PART 2 - 실전 역량 (10문항)</span>
           </div>
           {part2Questions.map(q => {

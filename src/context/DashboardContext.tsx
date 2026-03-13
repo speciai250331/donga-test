@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 import { LearnerRecord } from '../types';
 import { DashboardStats, calculateDashboardStats } from '../utils/dashboardStats';
 
-const STORAGE_KEY = 'donga_dashboard_records';
+const STORAGE_KEY = 'ai_diag_dashboard_records';
 
 interface DashboardContextValue {
   records: LearnerRecord[];

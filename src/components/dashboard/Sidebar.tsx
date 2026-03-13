@@ -46,11 +46,10 @@ export const Sidebar = () => {
             color: 'white', fontWeight: 700, fontSize: 12,
           }}
         >
-          DA
+          AI
         </div>
         <div>
-          <small style={{ display: 'block', fontSize: 10, color: BRAND.gray[400] }}>동아쏘시오홀딩스</small>
-          <span style={{ color: 'white', fontSize: 14, fontWeight: 600 }}>Admin</span>
+          <span style={{ color: 'white', fontSize: 14, fontWeight: 600 }}>AI 진단 Admin</span>
         </div>
       </div>
 
@@ -72,7 +71,7 @@ export const Sidebar = () => {
                   style={{
                     padding: '12px 20px', fontSize: 13, cursor: 'pointer',
                     borderLeft: `3px solid ${isActive ? BRAND.primary : 'transparent'}`,
-                    background: isActive ? 'rgba(1,171,204,0.1)' : 'transparent',
+                    background: isActive ? 'rgba(74,85,104,0.15)' : 'transparent',
                     color: isActive ? BRAND.primary : BRAND.gray[400],
                     transition: 'all 0.2s',
                   }}

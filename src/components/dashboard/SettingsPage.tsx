@@ -21,7 +21,7 @@ const Toggle = ({ value, onChange }: { value: boolean; onChange: (v: boolean) =>
 
 export const SettingsPage = () => {
   const { user } = useAuth();
-  const [title, setTitle] = useState('동아쏘시오홀딩스 AI 역량 진단');
+  const [title, setTitle] = useState('AI 역량 진단');
   const [description, setDescription] = useState('임직원 AI 활용 역량 수준을 진단하고 맞춤형 학습 방향을 제시합니다.');
   const [emailNotify, setEmailNotify] = useState(true);
   const [resultNotify, setResultNotify] = useState(true);
