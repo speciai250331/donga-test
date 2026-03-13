@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { DiagnosticPage } from './pages/DiagnosticPage';
+import { ImmDiagnosticPage } from './pages/ImmDiagnosticPage';
 import { LoginPage } from './pages/LoginPage';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import {
@@ -10,10 +11,11 @@ import {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ai-test">
       <Routes>
         {/* Public */}
         <Route path="/diagnostic" element={<DiagnosticPage />} />
+        <Route path="/diagnostic/imm" element={<ImmDiagnosticPage />} />
         <Route path="/login" element={<LoginPage />} />
 
         {/* Protected Admin */}
