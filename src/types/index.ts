@@ -32,3 +32,14 @@ export type Step = 'intro' | 'assessment' | 'result';
 export interface Answers {
   [questionId: number]: string[];
 }
+
+export interface LearnerRecord {
+  name: string;
+  dept: string;
+  rank: string;
+  level: string;
+  total: number;
+  part1: number;
+  part2: number;
+  date: string;
+}

@@ -70,7 +70,7 @@ export const DiagnosticPage = () => {
           />
         )}
         {step === 'result' && result && (
-          <ResultScreen result={result} isAnimating={isAnimating} onRestart={handleRestart} />
+          <ResultScreen result={result} answers={answers} isAnimating={isAnimating} onRestart={handleRestart} />
         )}
       </main>
 

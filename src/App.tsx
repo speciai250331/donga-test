@@ -1,24 +1,35 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { DiagnosticPage } from './pages/DiagnosticPage';
-import { AdminLayout, DashboardPage, DiagnosticManagePage, PlaceholderPage } from './components/dashboard';
+import { LoginPage } from './pages/LoginPage';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import {
+  AdminLayout, DashboardPage, DiagnosticManagePage,
+  ResultsPage, DepartmentsPage, TrendsPage,
+  ReportsPage, QuestionsPage, SettingsPage,
+} from './components/dashboard';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Diagnostic Assessment (standalone) */}
+        {/* Public */}
         <Route path="/diagnostic" element={<DiagnosticPage />} />
+        <Route path="/login" element={<LoginPage />} />
 
-        {/* Admin Dashboard */}
-        <Route path="/admin" element={<AdminLayout />}>
+        {/* Protected Admin */}
+        <Route path="/admin" element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        }>
           <Route index element={<DashboardPage />} />
           <Route path="diagnostic" element={<DiagnosticManagePage />} />
-          <Route path="results" element={<PlaceholderPage title="진단 결과" />} />
-          <Route path="departments" element={<PlaceholderPage title="부서별 현황" />} />
-          <Route path="trends" element={<PlaceholderPage title="추이 분석" />} />
-          <Route path="reports" element={<PlaceholderPage title="리포트" />} />
-          <Route path="questions" element={<PlaceholderPage title="문항 관리" />} />
-          <Route path="settings" element={<PlaceholderPage title="시스템 설정" />} />
+          <Route path="results" element={<ResultsPage />} />
+          <Route path="departments" element={<DepartmentsPage />} />
+          <Route path="trends" element={<TrendsPage />} />
+          <Route path="reports" element={<ReportsPage />} />
+          <Route path="questions" element={<QuestionsPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
 
         {/* Default redirect */}

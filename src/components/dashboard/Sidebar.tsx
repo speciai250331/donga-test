@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BRAND } from '../../constants';
+import { useAuth } from '../../contexts/AuthContext';
 
 const navItems = [
   { section: '메인', items: [
@@ -21,6 +22,7 @@ const navItems = [
 export const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { logout, user } = useAuth();
 
   return (
     <aside
@@ -94,6 +96,27 @@ export const Sidebar = () => {
           </ul>
         </div>
       ))}
+
+      {/* Logout */}
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '16px 20px', borderTop: `1px solid rgba(255,255,255,0.1)` }}>
+        {user && (
+          <div style={{ fontSize: 11, color: BRAND.gray[500], marginBottom: 8, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            {user.email}
+          </div>
+        )}
+        <button
+          onClick={async () => { await logout(); navigate('/login'); }}
+          style={{
+            width: '100%', padding: '10px 0', border: `1px solid rgba(255,255,255,0.15)`,
+            borderRadius: 8, background: 'transparent', color: BRAND.gray[400],
+            fontSize: 13, cursor: 'pointer', transition: 'all 0.2s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.color = 'white'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = BRAND.gray[400]; }}
+        >
+          로그아웃
+        </button>
+      </div>
     </aside>
   );
 };
