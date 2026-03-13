@@ -10,6 +10,7 @@ export interface Question {
   title: string;
   scenario?: string;
   isMultiple?: boolean;
+  isSubjective?: boolean;
   options: Option[];
 }
 
@@ -31,6 +32,10 @@ export type Step = 'intro' | 'assessment' | 'result';
 
 export interface Answers {
   [questionId: number]: string[];
+}
+
+export interface SubjectiveAnswers {
+  [questionId: number]: string;
 }
 
 export interface LearnerRecord {
